@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<body>
+<th:block th:include="~{fragments/user-navbar}"/>
+<section>
+<div id="roof">
+    <img src="img/roof.png" alt="Roof image"/>
+</div>
+    <div id="building"></div>
+<div id="offerManager">
+
+
+    <h2>Reg offer</h2>
+
+    <form method="post" th:action="@{/offer-reg}" th:object="${model}">
+        <div class="form-group" th:classappend="${#fields.hasErrors('departmentRent')}? 'text-danger'">
+            <label>
+                <input type="text" name="departmentRent" th:field="*{departmentRent}" placeholder="Rent price(lv)....">
+            </label>
+            <small th:each="error : ${#fields.errors('departmentRent')}" th:text="${error}">Error message</small>
+        </div>
+
+        <div class="form-group" th:classappend="${#fields.hasErrors('apartmentType')}? 'has-danger'">
+        <label>
+            <input type="text" name="apartmentType" th:field="*{apartmentType}" placeholder="Apartment type....">
+        </label>
+            <small th:each="err : ${#fields.errors('apartmentType')}" th:text="${err}"></small>
+        </div>
+
+        <div class="form-group" th:classappend="${#fields.hasErrors('agencyCommission')}? 'has-danger'">
+        <label>
+            <input type="number" name="agencyCommission" th:field="*{agencyCommission}" placeholder="Commission(%)...">
+        </label>
+            <small th:each="err : ${#fields.errors('agencyCommission')}" th:text="${err}"></small>
+        </div>
+
+        <button name="findOffer" class="button">Reg offer</button>
+    </form>
+</div>
+</section>
+
+<!--<th:block th:include="~{fragments/footer}"/>-->
+</body>
+</html>

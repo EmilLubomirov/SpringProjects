@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<th:block th:include="~{loader}"/>
+<link rel="stylesheet" href="css/loader.css">
+<body>
+<th:block th:include="~{fragments/user-navbar}"/>
+
+<section>
+    <div id="roof">
+        <img src="img/roof.png" alt="Roof image"/>
+    </div>
+
+<!--    Before doing it with JS we needed this:
+
+        <div id="all-offers" th:if="${not #lists.isEmpty(offers)}">
+        </div>
+
+        <div id="no-available-offers" th:unless="${not #lists.isEmpty(offers)}">
+        </div>
+-->
+
+<!--    <div id="all-offers"></div>-->
+
+<!--    <div id="no-available-offers"></div>
+
+        Now HTML is generated dynamically
+-->
+
+    <div id="offerManager" class="invisible" th:object="${roles}">
+        <div id="regOffer" th:if="${#lists.contains(roles, 'ADMIN')}">
+            <a href="/offer-reg" class="button">New Offer</a>
+        </div>
+        <div id="findOffer">
+            <a href="/offer-find" class="button" id="find-offer-button">Find Offer</a>
+        </div>
+    </div>
+</section>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+<script src="/js/offers.js"></script>
+
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<body onload="startTime()">
+<th:block th:include="~{fragments/guest-navbar}"/>
+
+<div class="home-greeting">
+    <h2>Welcome to the official website of Viva hotel!</h2>
+</div>
+
+<script src="js/animation.js"></script>
+
+<div id="homeDiv">
+    <img id="indexImg" alt="hotel image here"/>
+</div>
+
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

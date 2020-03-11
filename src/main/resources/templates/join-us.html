@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+
+<script src="js/join-usValidation.js"></script>
+
+<h3 id="join-us-heading">Become part of us!</h3>
+
+<body>
+<form class="applicant-form" method="post" th:action="@{/join-us}" th:object="${model}">
+    <div class="form-group">
+        <label for="inputFirstName">First name</label>
+        <input type="text" name="firstName" class="form-control" id="inputFirstName" aria-describedby="emailHelp" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+        <label for="inputLastName">Last name</label>
+        <input type="text" name="lastName" class="form-control" id="inputLastName" aria-describedby="emailHelp" placeholder="Enter last name">
+    </div>
+
+    <div class="form-group">
+        <label for="experience">Link to CV</label>
+        <input type="text" name="linkToCV" class="form-control" id="experience" aria-describedby="emailHelp" placeholder="Enter link">
+    </div>
+
+    <div class="form-group">
+        <label for="inputPhoneNumber">Phone number</label>
+        <input type="text" name="phoneNumber" class="form-control" id="inputPhoneNumber" aria-describedby="emailHelp" placeholder="Enter phone number">
+    </div>
+
+    <div class="form-group">
+        <label for="positions">Position </label>
+        <select id="positions" th:field="*{requestedPosition}">
+            <option value="accountant">Accountant</option>
+            <option value="cleaner">Cleaner</option>
+            <option value="cook">Cook</option>
+            <option value="plumber">Plumber</option>
+            <option value="security">Security</option>
+            <option value="tradesman">Tradesman</option>
+        </select>
+    </div>
+
+    <div class="user-apply-button">
+        <button type="submit" class="btn btn-primary" onclick="return validateData()">Apply</button>
+    </div>
+</form>
+
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

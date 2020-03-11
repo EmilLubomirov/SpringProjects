@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<body>
+
+<script src="js/loginUserValidator.js"></script>
+
+<form class="user-form" name="login-form" oninput="validateForm()" th:method="post" th:action="@{/login}">
+    <div class="form-group">
+        <label for="inputUsername">Username</label>
+        <input type="text" name="username" class="form-control" id="inputUsername" aria-describedby="emailHelp" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+        <label for="inputPassword1">Password</label>
+        <input type="password" name="password" class="form-control" id="inputPassword1" placeholder="Password">
+    </div>
+    <div class="user-apply-button">
+        <button id="login-button" type="submit" class="btn btn-primary" disabled onclick="findUser()">Login</button>
+    </div>
+</form>
+
+<!--&lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">-->
+<!--    Launch demo modal-->
+<!--</button>-->
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+<!--    <div class="modal-dialog modal-dialog-centered" role="document">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>-->
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                ...-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<h4 style="text-align: center; padding-top: 8%">You can register by clicking <a href="/register">this link</a></h4>
+<h4 style="text-align: center; padding-top: 1%">or go back home <a href="/">from here</a></h4>
+
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

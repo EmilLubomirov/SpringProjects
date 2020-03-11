@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<th:block th:include="~{loader}"/>
+<link rel="stylesheet" href="css/loader.css">
+<body>
+
+<th:block th:include="~{fragments/user-navbar}"/>
+
+<div class="appliers-greet invisible">
+    <p>Users who have applied for a job:</p>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+
+<script src="/js/appliers.js"></script>
+
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

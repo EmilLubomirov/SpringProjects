@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<body>
+<th:block th:include="~{fragments/user-navbar}"/>
+
+<div class="home-greeting">
+    <h2 th:text="'Nice to see you, ' + ${#session.getAttribute('username') + '!'}">Static content</h2>
+</div>
+
+<div id="staff-data">
+    <img class="home-image" src="img/hotel-staff.jpg" alt="hotel staff image here">
+    <p class="info-text">You can rely on our staff anytime and anywhere.<br>
+                            They are ready for replying your questions.</p>
+</div>
+
+<div id="offers-data">
+    <img class="home-image" src="img/hotel-room.jpg" alt="hotel room image here">
+    <p class="info-text">You are able to choose among variety of offers<br>
+                         depending on the type you are looking for.</p>
+</div>
+
+
+<div id="massage-data">
+    <img class="home-image" src="img/body-massage.jpg" alt="body massage image here">
+    <p class="info-text">After making a reservation you can book<br>
+                         some of our services as well.</p>
+</div>
+
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

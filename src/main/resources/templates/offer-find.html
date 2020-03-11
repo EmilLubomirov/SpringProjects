@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<body>
+
+<script src="js/offerFindValidator.js"></script>
+
+<th:block th:include="~{fragments/user-navbar}"/>
+<section>
+    <div id="roof">
+        <img src="img/roof.png" alt="Roof image"/>
+    </div>
+    <div id="building"></div>
+    <div id="offerManager">
+        <div id="findOffer">
+            <h2>Find offer</h2>
+            <form action="/offer-find" method="post">
+                <input type="number" name="familyBudget" id="budget" placeholder="Budget(lv)...">
+                <input type="text" name="apartmentType" id="type" placeholder="Apartment type...">
+                <input type="text" name="familyName" id="name" placeholder="Your name...">
+                <button name="findOffer" class="button" onclick="validateData()">Find offer</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div style="position: relative">
+    <th:block th:include="~{fragments/footer}"/>
+</div>
+
+</body>
+</html>

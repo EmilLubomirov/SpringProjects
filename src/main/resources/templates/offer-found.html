@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="~{fragments/head}"/>
+<body>
+<th:block th:include="~{fragments/user-navbar}"/>
+<section class="view-section">
+
+<h2>We successfully found an offer for you!</h2>
+
+<div class="apartment apartment-view" th:object="${foundOffer}">
+    <p th:text="${'Department rent: ' + foundOffer.departmentRent}"></p>
+    <p th:text="${'Apartment type: ' + foundOffer.apartmentType}"></p>
+    <p th:text="${'Agency commission: ' + foundOffer.agencyCommission}"></p>
+</div>
+
+<div id="offerManager">
+    <div id="regOffer">
+        <a href="/bought" class="button">Book</a>
+    </div>
+    <div id="findOffer">
+        <a href="/offers" class="button">Decline</a>
+    </div>
+</div>
+
+</section>
+<th:block th:include="~{fragments/footer}"/>
+</body>
+</html>

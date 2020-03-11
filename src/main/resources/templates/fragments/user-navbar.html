@@ -1,0 +1,29 @@
+<th:block th:fragment>
+    <header>
+        <div class="topnav">
+            <a class="active" href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/offers">Offers</a>
+
+            <th:block th:if="${#session.getAttribute('hasUserOffers') or
+                             #lists.contains(#session.getAttribute('roles'), 'ADMIN')}">
+                <a href="/services">Services</a>
+            </th:block>
+
+
+            <th:block th:if="${#session.getAttribute('hasApplied')} == false">
+                <a href="/join-us">Join us</a>
+            </th:block>
+
+            <th:block th:if="${#session.getAttribute('roles').contains('ROOT')}">
+                <a href="/staff">Staff</a>
+            </th:block>
+
+            <th:block th:if="${#session.getAttribute('roles').contains('ROOT')}">
+                <a href="/appliers">Appliers</a>
+            </th:block>
+
+            <a class="user-auth-link" href="/logout">Logout</a>
+        </div>
+    </header>
+</th:block>

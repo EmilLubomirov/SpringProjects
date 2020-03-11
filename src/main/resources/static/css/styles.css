@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+
+body
+{
+    background-image: url("https://media.gettyimages.com/photos/indoor-plant-on-white-floor-with-empty-concrete-wall-background-and-picture-id899304854?b=1&k=6&m=899304854&s=612x612&w=0&h=jY3a9EytlBmjBhJWzc0w6jZ9PNzZSDBKZQ1PaB8lSjg=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+div#roof {
+    width: 100%;
+    height: 390px;
+    background-image: url("img/roof.png");
+}
+
+div#roof h1 {
+    margin-top: 50%;
+    text-align: center;
+}
+
+div#building {
+    width: 99%;
+    border: 5px solid rgb(1, 1, 56);
+    border-top: none;
+}
+
+div#offerManager {
+    border: 1px solid #010138;
+}
+
+#regOffer, #findOffer {
+    display: inline-block;
+    width: 41%;
+    margin: 11px 18px;
+    padding: 0;
+}
+
+/*#offerManager h2 {*/
+/*    text-align: center;*/
+/*}*/
+
+#offerManager input {
+    width: 100%;
+}
+
+input, .button {
+    font-size: 24px;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 7px;
+}
+
+p#message
+{
+    border: 2px solid red;
+}
+
+#offerManager div#notifications p#message {
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px;
+    color: orangered;
+    font-weight: bold;
+}
+
+.apartment
+{
+    font-size: larger;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: 2px solid green;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.index-apartment
+{
+    width: 188px;
+}
+
+
+.button {
+    margin: 15px;
+    color: #010138;
+    background: transparent;
+    border: 3px solid #010138;
+    border-radius: 10px;
+    padding: 1px 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #010138;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.sorry-img
+{
+    width: 60%;
+    display: block;
+    margin: 50px auto 90px;
+}
+
+
+.apartment-view
+{
+    width: 400px;
+    height: 200px;
+    font-size: 19px;
+    padding-top: 43px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover
+{
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active
+{
+    background-color: #008000;
+    color: white;
+}
+a.user-auth-link
+{
+    float: right;
+}
+
+.user-form
+{
+    width: 30%;
+    font-size: x-large;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.applicant-form
+{
+    width: 30%;
+    font-size: x-large;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.user-apply-button
+{
+    text-align: center;
+}
+
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.services-message, .appliers-greet, #no-appliers
+{
+    margin-top: 3%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.home-greeting
+{
+    margin-top: 3%;
+    text-align: center;
+}
+
+.table-services, .table-appliers, .table-staff
+{
+    margin-top: 6%;
+    font-size: large;
+}
+
+.table-services
+{
+    margin-left: 0;
+}
+
+.table-appliers
+{
+    margin-left: 0;
+}
+
+#positions
+{
+    font-size: smaller;
+}
+
+#price-label
+{
+    text-align: center;
+    font-size: x-large;
+    background: #fff082;
+    display: inline-block;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-style: solid;
+    margin-bottom: 2%;
+}
+
+.table-staff
+{
+    margin-left: 0;
+}
+
+#about-us
+{
+    text-align: center;
+    margin-top: 6%;
+}
+
+label textarea
+{
+    font-size: initial;
+    background-color: white;
+}
+
+#indexImg
+{
+    width: 560px;
+    height: 280px;
+}
+
+#homeDiv
+{
+    position: fixed;
+    top: 42%;
+    left: 35%;
+    margin-top: -50px;
+    margin-left: -100px;
+    border: 2px solid;
+}
+
+#staff-data
+{
+    position: fixed;
+    top: 38%;
+    left: 12%;
+    margin-top: -50px;
+    margin-left: -100px;
+    display: block;
+}
+
+.home-image
+{
+    width: 320px;
+    height: 200px;
+}
+
+.info-text
+{
+    font-size: large;
+    margin-top: 20px;
+}
+
+#offers-data
+{
+    position: fixed;
+    top: 53%;
+    left: 46%;
+    margin-top: -50px;
+    margin-left: -100px;
+    display: block;
+}
+
+#massage-data
+{
+    position: fixed;
+    top: 38%;
+    left: 80%;
+    margin-top: -50px;
+    margin-left: -100px;
+    display: block;
+}
+
+#join-us-heading
+{
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+
+
